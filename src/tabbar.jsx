@@ -56,8 +56,9 @@ class TabBar extends Component {
     });
     if (currIndex === nextIndex) { return; }
 
+    this.scrollTops[currIndex] = document.body.scrollTop || 0;
+
     if (curr && curr.props && curr.props.inActive) {
-      this.scrollTops[currIndex] = document.body.scrollTop || 0;
       curr.props.inActive();
     }
     this.setState({
@@ -65,13 +66,14 @@ class TabBar extends Component {
     });
     if (next && next.props && next.props.onActive) {
       next.props.onActive();
-      const scrollTop = this.scrollTops[nextIndex] || 0;
-      window.scrollTo(0, scrollTop);
-      // 部分机型比较卡，需要延迟执行下。
-      setTimeout(() => {
-        window.scrollTo(0, scrollTop);
-      }, 15);
     }
+
+    const scrollTop = this.scrollTops[nextIndex] || 0;
+    window.scrollTo(0, scrollTop);
+    // 部分机型比较卡，需要延迟执行下。
+    setTimeout(() => {
+      window.scrollTo(0, scrollTop);
+    }, 15);
   }
 
   getTabPanelSize() {
