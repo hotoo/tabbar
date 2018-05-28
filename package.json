@@ -1,6 +1,6 @@
 {
   "name": "@hotoo/tabbar",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "TabBar for mobile app",
   "keywords": [ "TabBar" ],
   "files": [
