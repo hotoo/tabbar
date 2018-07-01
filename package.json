@@ -11,14 +11,14 @@
   ],
   "main": "./lib/tabbar.js",
   "module": "./es/tabbar.js",
-  "homepage": "https://github.com/react-component/m-input-number",
-  "author": "tsjxyz@gmail.com",
+  "homepage": "https://github.com/hotoo/tabbar",
+  "author": "hotoo.cn@gmail.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:react-component/m-input-number.git"
+    "url": "git@github.com:hotoo/tabbar.git"
   },
   "bugs": {
-    "url": "http://github.com/react-component/m-input-number/issues"
+    "url": "https://github.com/hotoo/tabbar/issues"
   },
   "licenses": "MIT",
   "scripts": {
